@@ -25,42 +25,21 @@
       "password": "123456"
     },
     {
-      "id": "4cc23a7b-a7b1-45e4-92c1-fd78d06cf92b",
-      "fullName": "   ",
-      "userName": "   ",
-      "email": "hassan.mostafa2251@gmail.com",
-      "phone": "   ",
-      "password": "12345678"
-    },
-    {
-      "fullName": "New Name",
-      "phone": "123456",
-      "id": "d75d452d-f60c-4070-95a2-0aa3113c5d44"
-    },
-    {
-      "id": "f2341fac-2da2-49e1-8a51-9c2ed8e21b40",
+      "id": "77ddf8b8-f656-4d51-b994-3aadd4dd7cb7",
       "fullName": "Hassan Mostafa Hassan Mohamed",
-      "userName": "hassanUserName",
-      "email": "hassan@hassan.com",
-      "phone": "011222555544",
-      "password": "123456"
-    },
-    {
-      "id": "6a7bc4d3-9512-4224-9639-808277f71332",
-      "fullName": "HassanMosssstafa ",
-      "userName": "hassanUser nAME",
-      "email": "hassan@hassan.com",
-      "phone": "0123131654",
-      "password": "123456"
-    },
-    {
-      "id": "34ba5c54-e4c4-424b-9fbf-b336d4b068a4",
-      "fullName": "Hassan Mostafa Hassan Mohamed",
-      "userName": "hshshs",
-      "email": "hassan@hassan.zig",
-      "phone": "888888888888",
+      "userName": "huss",
+      "email": "hassan@yahoo.biz",
+      "phone": "123456789",
       "password": "123456",
       "posts": []
+    },
+    {
+      "id": "5ad1ca81-4082-4132-8163-bdc8eb520f5c",
+      "fullName": "Hussam Mostafa Hassan",
+      "userName": "huss",
+      "email": "huss@huss.com",
+      "phone": "1122321321654",
+      "password": "123456"
     }
   ],
   "posts": [
@@ -72,39 +51,60 @@
       "createdAt": "now()"
     },
     {
-      "id": "95f90693-dcba-42e6-82c2-34774c2f8b9a",
-      "userId": "d75d452d-f60c-4070-95a2-0aa3113c5d44",
-      "title": "Post One",
-      "body": "1",
-      "createdAt": "2022-04-06T23:44:38.612Z"
-    },
-    {
-      "id": "426a8618-9b15-4747-af63-184fdd7759c1",
-      "userId": "d75d452d-f60c-4070-95a2-0aa3113c5d44",
-      "title": "post two",
-      "body": "2",
+      "id": "426a8618-9b15-4747-af63-184fdd775944",
+      "userId": "77ddf8b8-f656-4d51-b994-3aadd4dd7cb7",
+      "title": "Post",
+      "body": "hassan le hassan.biz",
       "createdAt": "2022-04-06T23:44:51.604Z"
     },
     {
-      "id": "9cec9ef1-2341-4af9-9a57-5325cc60aafd",
-      "userId": "d75d452d-f60c-4070-95a2-0aa3113c5d44",
-      "title": "3",
-      "body": "44",
-      "createdAt": "2022-04-06T23:47:37.786Z"
+      "id": "3319ed2e-5d12-4dd8-a359-df444a19e3c0",
+      "userId": "77ddf8b8-f656-4d51-b994-3aadd4dd7cb7",
+      "title": "Post Number One",
+      "body": "This is the body of a post number one for a new created User under email hassan@yahoo.biz with password 123456",
+      "createdAt": "2022-04-08T11:40:11.912Z"
     },
     {
-      "id": "a4d37ef4-c144-4fd9-8edd-658741a7ad2b",
-      "userId": "d75d452d-f60c-4070-95a2-0aa3113c5d44",
-      "title": "post four",
-      "body": "4",
-      "createdAt": "2022-04-06T23:47:47.026Z"
+      "id": "60a24fb4-caa7-44af-b361-817a450cab4f",
+      "userId": "77ddf8b8-f656-4d51-b994-3aadd4dd7cb7",
+      "title": "Post Number Two .",
+      "body": "This is the body for post number two for a new created User under the name Hassan Mostafa Hassan Mohamed and Email: hassan@yahoo.biz\npassword 123456 with id of  User ID: 77ddf8b8-f656-4d51-b994-3aadd4dd7cb7 and Phone Number:123456789\n\n\n\n",
+      "createdAt": "2022-04-08T11:41:09.890Z"
     },
     {
-      "id": "91abc0ef-a64e-4476-954b-79a86e311b94",
-      "userId": "d75d452d-f60c-4070-95a2-0aa3113c5d44",
-      "title": "POST FIVE",
-      "body": "FIVE",
-      "createdAt": "2022-04-06T23:48:06.001Z"
+      "id": "4b3ed226-f4b2-47f6-a7bc-1922c1b420b8",
+      "userId": "77ddf8b8-f656-4d51-b994-3aadd4dd7cb7",
+      "title": "Post Number Three !",
+      "body": "This is the body for post number two for a new created User under the name Hassan Mostafa Hassan Mohamed and Email: hassan@yahoo.biz password 123456 with id of User ID: 77ddf8b8-f656-4d51-b994-3aadd4dd7cb7 and Phone Number:123456789 \nThis is the body for post number two for a new created User under the name Hassan Mostafa Hassan Mohamed and Email: hassan@yahoo.biz password 123456 with id of User ID: 77ddf8b8-f656-4d51-b994-3aadd4dd7cb7 and Phone Number:123456789\nThis is the body for post number two for a new created User under the name Hassan Mostafa Hassan Mohamed and Email: hassan@yahoo.biz password 123456 with id of User ID: 77ddf8b8-f656-4d51-b994-3aadd4dd7cb7 and Phone Number:123456789\nThis is the body for post number two for a new created User under the name Hassan Mostafa Hassan Mohamed and Email: hassan@yahoo.biz password 123456 with id of User ID: 77ddf8b8-f656-4d51-b994-3aadd4dd7cb7 and Phone Number:123456789\nThis is the body for post number two for a new created User under the name Hassan Mostafa Hassan Mohamed and Email: hassan@yahoo.biz password 123456 with id of User ID: 77ddf8b8-f656-4d51-b994-3aadd4dd7cb7 and Phone Number:123456789This is the body for post number two for a new created User under the name Hassan Mostafa Hassan Mohamed and Email: hassan@yahoo.biz password 123456 with id of User ID: 77ddf8b8-f656-4d51-b994-3aadd4dd7cb7 and Phone Number:123456789\nThis is the body for post number two for a new created User under the name Hassan Mostafa Hassan Mohamed and Email: hassan@yahoo.biz password 123456 with id of User ID: 77ddf8b8-f656-4d51-b994-3aadd4dd7cb7 and Phone Number:123456789\n",
+      "createdAt": "2022-04-08T11:42:22.107Z"
+    },
+    {
+      "id": "023424be-b39b-49b5-a98c-bc71915358e5",
+      "userId": "5ad1ca81-4082-4132-8163-bdc8eb520f5c",
+      "title": "huss Post Number One",
+      "body": "{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}",
+      "createdAt": "2022-04-08T13:07:36.364Z"
+    },
+    {
+      "id": "3302995e-eca6-47cc-b21d-310146d6c87d",
+      "userId": "5ad1ca81-4082-4132-8163-bdc8eb520f5c",
+      "title": "Huss Post Number Two",
+      "body": "{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}",
+      "createdAt": "2022-04-08T13:07:49.147Z"
+    },
+    {
+      "id": "8101f7f2-4b23-49c3-aed8-eaa23c636fff",
+      "userId": "5ad1ca81-4082-4132-8163-bdc8eb520f5c",
+      "title": "HUSS Post Three",
+      "body": "{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}{user[0].email && user[0].email}",
+      "createdAt": "2022-04-08T13:07:59.293Z"
+    },
+    {
+      "id": "cd8770c9-321b-4b34-8fd6-b1de799e4cb6",
+      "userId": 4,
+      "title": "business post number To",
+      "body": " <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr />\n",
+      "createdAt": "2022-04-08T13:10:46.514Z"
     }
   ]
 }

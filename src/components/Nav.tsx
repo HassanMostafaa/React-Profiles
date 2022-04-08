@@ -20,18 +20,20 @@ export const Nav: React.FC<any> = () => {
       </div>
 
       <div className="menu">
-        {/* <Link to="/">AnotherLink</Link> */}
-
         {state ? (
-          <Link
-            to="/"
-            className="nav-call-to-action"
-            onClick={() => {
-              dispatch(resetCurrentUser());
-            }}
-          >
-            Logout
-          </Link>
+          <>
+            <Link to="/search">Search</Link>
+            <Link to="/">Account Profile</Link>
+            <Link
+              to="/"
+              className="nav-call-to-action"
+              onClick={() => {
+                dispatch(resetCurrentUser());
+              }}
+            >
+              Logout
+            </Link>
+          </>
         ) : (
           <Link to="/" className="nav-call-to-action">
             Login

@@ -1,0 +1,46 @@
+@import "../styles/globalVars.scss";
+
+.search-profiles {
+  background-color: $secondary-dark;
+  padding: 40px;
+  .search-field {
+    input {
+      width: 100%;
+      background: $secondary-dark;
+      border: none;
+      outline: 2px solid $outliner;
+      padding: 10px 20px;
+      margin: 10px auto;
+      border-radius: 4px;
+      color: $white-text;
+      font-size: 20px;
+      transition: 0.5s ease-in-out;
+      &:focus {
+        outline: 2px solid $primary-light;
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+
+  .search-results {
+    a {
+      color: $white-text;
+      text-decoration: none;
+    }
+    .result-user-card {
+      background-color: $primary-dark;
+      padding: 20px;
+      border-radius: 10px;
+      outline: 1px solid $outliner;
+      margin-block: 20px;
+      &:hover {
+        box-shadow: 0 0 15px #e4641a3a;
+      }
+    }
+  }
+}
+.user-profile {
+  background-color: $secondary-dark;
+  padding: 30px;
+  outline: 2px solid $outliner;
+}
