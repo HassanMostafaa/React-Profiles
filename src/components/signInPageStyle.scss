@@ -1,0 +1,49 @@
+@import "../styles/globalVars.scss";
+
+.sign-in-area {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  .sign-in-card {
+    background: $secondary-dark;
+    outline: 2px solid $outliner;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 400px;
+    .switch-forms {
+      color: $faded-white-text;
+      font-size: 14px;
+      cursor: pointer;
+
+      span {
+        color: $white-text;
+        margin: 0 10px;
+      }
+    }
+    .sign-in-form,
+    .sign-up-form {
+      input {
+        width: 100%;
+        background: $secondary-dark;
+        border: none;
+        outline: 2px solid $outliner;
+        padding: 10px 20px;
+        margin: 10px auto;
+        border-radius: 4px;
+        color: $white-text;
+
+        &:focus {
+          outline: 2px solid $primary-light;
+        }
+      }
+      input[type="submit"] {
+        color: $white-text;
+        background: $call-to-action;
+      }
+    }
+  }
+}

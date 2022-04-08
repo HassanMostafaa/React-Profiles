@@ -1,0 +1,51 @@
+@import "../styles/globalVars.scss";
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  outline: 2px solid $outliner;
+  padding: 10px 40px;
+  margin: 20px 0;
+  border-radius: 11px;
+  background: $secondary-dark;
+  .menu {
+    a {
+      margin: 0 20px;
+      color: $white-text;
+      text-decoration: none;
+    }
+    .nav-call-to-action {
+      background: $call-to-action;
+      padding: 8px 20px;
+      border-radius: 3px;
+      text-decoration: none;
+      color: $white-text;
+    }
+  }
+
+  .logo h3 {
+    letter-spacing: 8px;
+    a {
+      color: $white-text;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: block;
+    text-align: center;
+    padding: 30px 0;
+    .menu {
+      a {
+        margin: 20px;
+        color: $white-text;
+        text-decoration: none;
+        display: block;
+      }
+    }
+  }
+}

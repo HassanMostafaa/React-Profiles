@@ -1,0 +1,57 @@
+@import "../styles/globalVars.scss";
+.personal-info-card {
+  background-color: $secondary-dark;
+  padding: 20px;
+  outline: 2px solid $outliner;
+  border-radius: 15px;
+  p > span {
+    color: $faded-white-text;
+    margin: 0 0 0 10px;
+  }
+
+  .edit-profile-area {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-dark;
+    overflow: hidden;
+
+    .edit-profile-form {
+      max-width: 550px;
+      background-color: $primary-dark;
+      padding: 30px;
+      outline: 2px solid $outliner;
+      border-radius: 10px;
+      input {
+        width: 100%;
+        border: none;
+        outline: 2px solid $outliner;
+        margin: 10px auto;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: $secondary-dark;
+        color: $white-text;
+      }
+      input[type="submit"] {
+        background: $call-to-action;
+      }
+      .del-acc {
+        border: 2px solid rgb(167, 18, 18);
+        color: rgb(167, 18, 18);
+        background-color: $secondary-dark;
+        width: 100%;
+        border-radius: 5px;
+        font-size: 18px;
+
+        padding: 8px;
+        margin: 20px 0;
+      }
+    }
+  }
+}
