@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { adminFetchServerPosts } from "../redux/adminPrivileges/adminReducers";
 import { Link } from "react-router-dom";
+
 export const AdminPosts: React.FC = () => {
   const dispatch = useDispatch();
   const serverPosts = useSelector((state: any) =>
