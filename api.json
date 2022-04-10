@@ -1,20 +1,24 @@
 {
   "users": [
     {
-      "id": 4,
-      "fullName": "Hassan .M Hassan",
-      "userName": "hassanbmw",
-      "email": "hassan@hassan.biz",
-      "phone": "01122354655",
-      "password": "123456"
+      "id": 1,
+      "fullName": "Hassan Admin Account",
+      "userName": "admin",
+      "email": "admin@admin.com",
+      "phone": "11111111111",
+      "password": "123456",
+      "privilegeLevel": "admin",
+      "createdAt": "1-1-1T1:1:1.14Z"
     },
     {
-      "id": "49ad4227-41e0-463b-819a-2a1c5f3d6055",
+      "id": "49ad4227-41e0-463b-819a-2a1c5f3d6055 ",
       "fullName": "newUs",
       "userName": "newuser username",
       "email": "newuser@newuser.com",
       "phone": "123456",
-      "password": "123456"
+      "password": "123456",
+      "privilegeLevel": "user",
+      "createdAt": "2021-04-08T13:10:46.514Z"
     },
     {
       "id": "19293476-16d3-4202-b5f3-0172536adf4b",
@@ -22,7 +26,9 @@
       "userName": "newUserUserName",
       "email": "newUser@user.com",
       "phone": "0123456789",
-      "password": "123456"
+      "password": "123456",
+      "privilegeLevel": "user",
+      "createdAt": "2020-04-08T13:10:46.514Z"
     },
     {
       "id": "77ddf8b8-f656-4d51-b994-3aadd4dd7cb7",
@@ -31,7 +37,8 @@
       "email": "hassan@yahoo.biz",
       "phone": "123456789",
       "password": "123456",
-      "posts": []
+      "privilegeLevel": "user",
+      "createdAt": "2019-04-08T13:10:46.514Z"
     },
     {
       "id": "5ad1ca81-4082-4132-8163-bdc8eb520f5c",
@@ -39,17 +46,22 @@
       "userName": "huss",
       "email": "huss@huss.com",
       "phone": "1122321321654",
-      "password": "123456"
+      "password": "123456",
+      "privilegeLevel": "user",
+      "createdAt": "2019-01-08T13:10:46.514Z"
+    },
+    {
+      "id": "ec18cd5b-7511-4062-be55-445a93e667b7",
+      "fullName": "Hassan Mostafa Mo",
+      "userName": "hassan@hassan.com",
+      "email": "hassan@hassan.com",
+      "phone": "121132",
+      "password": "12345678",
+      "privilegeLevel": "user",
+      "createdAt": "2022-04-10T03:00:52.297Z"
     }
   ],
   "posts": [
-    {
-      "id": 1,
-      "userId": 4,
-      "title": "User Four Post One",
-      "body": "this is the body of the first post of the 4TH user in the profiles-react project",
-      "createdAt": "now()"
-    },
     {
       "id": "426a8618-9b15-4747-af63-184fdd775944",
       "userId": "77ddf8b8-f656-4d51-b994-3aadd4dd7cb7",
@@ -100,11 +112,25 @@
       "createdAt": "2022-04-08T13:07:59.293Z"
     },
     {
-      "id": "cd8770c9-321b-4b34-8fd6-b1de799e4cb6",
-      "userId": 4,
-      "title": "business post number To",
-      "body": " <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr /> <hr />\n",
-      "createdAt": "2022-04-08T13:10:46.514Z"
+      "id": "d029d929-5620-4984-8459-61d19358b940",
+      "userId": 1,
+      "title": "Admin Post Number One",
+      "body": "This is the body for admin admin post number one Post",
+      "createdAt": "2022-04-10T01:10:17.131Z"
+    },
+    {
+      "id": "bbf64155-70aa-43be-b8b2-1ac84d5f0ad3",
+      "userId": 1,
+      "title": "Post Three",
+      "body": "123",
+      "createdAt": "2022-04-10T02:44:25.795Z"
+    },
+    {
+      "id": "01771fbe-193f-4263-b7c1-cc6e5e9b34f7",
+      "userId": "ec18cd5b-7511-4062-be55-445a93e667b7",
+      "title": "Hassan Mostafa Mo 2",
+      "body": "Hassan Mostafa Mo second post",
+      "createdAt": "2022-04-10T03:01:37.415Z"
     }
   ]
 }

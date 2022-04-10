@@ -22,17 +22,15 @@ export const ProfilePersonalActivity: React.FC<any> = ({
     e.preventDefault();
     const postTitle = e.target.postTitle.value;
     const postBody = e.target.postBody.value;
-    console.log(postTitle + "\n" + postBody);
-    console.log(currentUser);
-    await axios
-      .post(postsURL, {
-        id: uuid(),
-        userId: currentUser.id,
-        title: postTitle,
-        body: postBody,
-        createdAt: date,
-      })
-      .catch((error) => console.log(error));
+
+    await axios.post(postsURL, {
+      id: uuid(),
+      userId: currentUser.id,
+      title: postTitle,
+      body: postBody,
+      createdAt: date,
+    });
+
     getCurrentUserPosts(`http://localhost:3001/users/${currentUser.id}/posts`);
     setAddPostForm(false);
   };

@@ -14,7 +14,9 @@ export const Profile: React.FC<any> = () => {
   const getCurrentUserPosts = async (URL: string) => {
     const res = await axios.get(URL);
     const userPosts = await res.data;
-    setCurrentUserPosts(userPosts);
+    setCurrentUserPosts(
+      userPosts.sort((a: any, b: any) => (a.createdAt < b.createdAt ? 1 : -1))
+    );
   };
 
   useEffect(() => {

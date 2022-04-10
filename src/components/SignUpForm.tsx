@@ -6,6 +6,7 @@ import { v4 as uuid } from "uuid";
 export const SignUpForm: React.FC<any> = ({ setSignInFormState }): any => {
   const [errorMsg, setErrorMsg] = useState("");
   const mainURL = "http://localhost:3001/users";
+  const date = new Date();
   // const navigate = useNavigate();
   const handleSignUpForm = async (e: any) => {
     e.preventDefault();
@@ -15,14 +16,6 @@ export const SignUpForm: React.FC<any> = ({ setSignInFormState }): any => {
     const rePasswordInput = e.target.rePassword.value;
     const userNameInput = e.target.userName.value;
     const phoneNumValue = e.target.phoneNum.value;
-    console.log(
-      fullNameInput,
-      emailInput,
-      passwordInput,
-      rePasswordInput,
-      userNameInput,
-      phoneNumValue
-    );
 
     const res = await axios.get(`${mainURL}?email=${emailInput}`);
     const result = await res.data;
@@ -36,13 +29,10 @@ export const SignUpForm: React.FC<any> = ({ setSignInFormState }): any => {
       !phoneNumValue
     ) {
       setErrorMsg("Make Sure you Entered a valid Values");
-      console.log("invalid vals");
     } else if (passwordInput !== rePasswordInput) {
       setErrorMsg("Confirm Password Input doesn't Match");
-      console.log("passwordInput !== rePasswordInput");
     } else if (result.length !== 0) {
       setErrorMsg("Email Address already Used");
-      console.log("email");
     } else {
       try {
         await axios.post(mainURL, {
@@ -52,12 +42,12 @@ export const SignUpForm: React.FC<any> = ({ setSignInFormState }): any => {
           email: emailInput,
           phone: phoneNumValue,
           password: passwordInput,
+          privilegeLevel: "user",
+          createdAt: date,
         });
         alert("Login with the new user information");
         setSignInFormState(true);
-        console.log("postReq");
       } catch (error) {
-        console.log(error);
         setErrorMsg(JSON.stringify(error));
       }
     }

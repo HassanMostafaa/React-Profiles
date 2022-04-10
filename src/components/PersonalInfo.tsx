@@ -26,9 +26,7 @@ export const PersonalInfo: React.FC = () => {
       fullName: newFullName,
       phone: newPhoneNumber,
     };
-    await axios.put(`${mainURL}/${currentUser.id}`, newData).catch((error) => {
-      console.log(error);
-    });
+    await axios.put(`${mainURL}/${currentUser.id}`, newData);
     setShowEdit(false);
 
     const res = await axios.get(mainURL);
@@ -38,9 +36,7 @@ export const PersonalInfo: React.FC = () => {
 
   const handleDelAcc = async () => {
     if (window.confirm("ARE YOU SURE YOU WANT TO DELETE YOUR ACCOUNT ?")) {
-      const res = await axios.delete(`${mainURL}/${currentUser.id}`);
-      const result = await res.data;
-      console.log(result);
+      await axios.delete(`${mainURL}/${currentUser.id}`);
       dispatch(resetCurrentUser());
     } else {
       setShowEdit(false);

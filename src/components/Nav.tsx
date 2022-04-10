@@ -24,6 +24,11 @@ export const Nav: React.FC<any> = () => {
           <>
             <Link to="/search">Search</Link>
             <Link to="/">Account Profile</Link>
+            {state.privilegeLevel === "admin" && (
+              <Link to="/dashboard/users" className="nav-call-to-action">
+                Dashboard
+              </Link>
+            )}
             <Link
               to="/"
               className="nav-call-to-action"

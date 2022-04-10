@@ -29,7 +29,7 @@ code {
 .abstract {
   width: 400px;
   height: 250px;
-
+  pointer-events: none;
   position: absolute;
   top: 80px;
   right: -200px;

@@ -13,19 +13,22 @@ export const UserProfile: React.FC = () => {
     const res = await axios.get(URL);
     const userDetails = await res.data;
     setUser(userDetails);
-    console.log(user);
   };
 
   const getSelectedUserPosts = async () => {
     const res = await axios.get(`${URL}/posts`);
     const postsDetails = await res.data;
-    setuserPosts(postsDetails);
-    console.log(userPosts);
+    setuserPosts(
+      postsDetails.sort((a: any, b: any) =>
+        a.createdAt < b.createdAt ? 1 : -1
+      )
+    );
   };
 
   useEffect(() => {
     getSelectedUser();
     getSelectedUserPosts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -35,14 +38,15 @@ export const UserProfile: React.FC = () => {
         <>
           <p>{user[0].email}</p>
           <p>{user[0].fullName}</p>
+          <p>{userPosts.length} Posts Created with this Profile</p>
         </>
       )}
 
       <h1>Recent Activity</h1>
+
       {userPosts &&
         userPosts.map((post: any, ix: number) => (
-          <div key={ix}>
-            <hr />
+          <div key={ix} className="card">
             <p>{post.title}</p>
             <p>{post.body}</p>
           </div>

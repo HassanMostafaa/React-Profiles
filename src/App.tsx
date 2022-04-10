@@ -5,6 +5,9 @@ import { useSelector } from "react-redux";
 import { Search } from "./pages/Search";
 import { Profile } from "./pages/Profile";
 import { UserProfile } from "./pages/UserProfile";
+import { Dashboard } from "./pages/Dashboard";
+import { AdminPosts } from "./components/AdminPosts";
+import { AdminUsers } from "./components/AdminUsers";
 
 function App() {
   const loggedin = useSelector(
@@ -26,6 +29,10 @@ function App() {
             <Route path="" element={<Profile></Profile>}></Route>
             <Route path="search" element={<Search></Search>}></Route>
             <Route path="search/:id" element={<UserProfile />}></Route>
+            <Route path="dashboard" element={<Dashboard />}>
+              <Route path="users" element={<AdminUsers></AdminUsers>}></Route>
+              <Route path="posts" element={<AdminPosts></AdminPosts>}></Route>
+            </Route>
             <Route path="*" element={<Navigate replace to="/search" />}></Route>
           </>
         )}

@@ -1,15 +1,7 @@
 import { SET_CURRENT_USER, RESET_CURRENT_USER } from "./currentUserActionTypes";
 
 const initialState = {
-  currentUser: [
-    // {
-    //   id: "123456",
-    //   fullName: "Hassan Mostafa Hassan",
-    //   userName: "hassan2251",
-    //   email: "hassan@hassan.com",
-    //   phone: "01144225545",
-    // },
-  ],
+  currentUser: [],
   loggedin: false,
 };
 

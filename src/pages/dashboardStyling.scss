@@ -1,0 +1,134 @@
+@import "../styles/globalVars.scss";
+.dashboard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  .sidebar {
+    margin: 0 20px 0 0;
+    outline: 2px solid $outliner;
+    border-radius: 10px;
+    padding: 20px;
+    background: $secondary-dark;
+
+    .menu-link {
+      .active {
+        color: $primary-light;
+      }
+      margin: 20px 0;
+      a {
+        color: $faded-white-text;
+        text-decoration: none;
+        &:hover {
+          color: $primary-light;
+        }
+      }
+    }
+  }
+
+  .content {
+    background: $secondary-dark;
+    outline: 2px solid $outliner;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+    .users-section {
+      //table
+      table {
+        max-width: 500px;
+      }
+      .tg {
+        border-collapse: separate;
+        border-color: $outliner;
+      }
+      .tg td {
+        background-color: $primary-dark;
+        border-color: $outliner;
+        border-style: solid;
+        border-width: 0px;
+        color: $white-text;
+        font-size: 14px;
+        overflow: hidden;
+        padding: 10px 5px;
+        word-break: normal;
+      }
+      .tg th {
+        background-color: $secondary-dark;
+        border-color: $outliner;
+        border-style: solid;
+        border-width: 0px;
+        color: $faded-white-text;
+
+        font-size: 14px;
+        font-weight: bold;
+        overflow: hidden;
+        padding: 10px 5px;
+        word-break: normal;
+      }
+      .tg .tg-0lax {
+        text-align: left;
+        vertical-align: top;
+        border: 1px solid $outliner;
+      }
+      .user-card {
+        background-color: $primary-dark;
+        padding: 10px;
+        border-radius: 10px;
+        outline: 2px solid $outliner;
+        margin: 10px 0;
+      }
+    }
+
+    .posts-section {
+      a {
+        color: $white-text;
+        text-decoration: none;
+        .post {
+          max-width: 100%;
+          background-color: $primary-dark;
+          margin: 10px 0;
+          border-radius: 10px;
+          outline: 2px solid $outliner;
+          padding: 20px;
+          .faded {
+            color: $faded-white-text;
+            font-size: 13px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1315px) {
+  .dashboard {
+    display: block;
+    width: 100%;
+    .sidebar {
+      min-width: 100%;
+      margin: 20px auto;
+      min-height: 100%;
+    }
+    .content {
+      min-width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 1015px) {
+  table {
+    .hide-on-md {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    .hide-on-md,
+    .hide-on-sm {
+      display: none;
+    }
+  }
+}
