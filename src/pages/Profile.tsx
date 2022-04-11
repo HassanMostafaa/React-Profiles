@@ -9,7 +9,7 @@ export const Profile: React.FC<any> = () => {
   const currentUser = useSelector(
     (state: any) => state.currentUserReducer.currentUser[0]
   );
-  const postsReqURL = `http://localhost:3001/users/${currentUser.id}/posts`;
+  const postsReqURL = `https://json-server-dep.herokuapp.com/users/${currentUser.id}/posts`;
 
   const getCurrentUserPosts = async (URL: string) => {
     const res = await axios.get(URL);

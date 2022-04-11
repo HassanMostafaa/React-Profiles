@@ -5,9 +5,9 @@ import "../components/search.scss";
 
 export const UserProfile: React.FC = () => {
   const params = useParams();
-  const URL = `http://localhost:3001/users/${params.id}`;
-  const [user, setUser] = useState<any>([{}]);
-  const [userPosts, setuserPosts] = useState<any>([{}]);
+  const URL = `https://json-server-dep.herokuapp.com/users/${params.id}`;
+  const [user, setUser] = useState<any>({});
+  const [userPosts, setuserPosts] = useState<any>([]);
 
   const getSelectedUser = async () => {
     const res = await axios.get(URL);
@@ -36,9 +36,9 @@ export const UserProfile: React.FC = () => {
       <h1>Profile Information</h1>
       {user && (
         <>
-          <p>{user[0].email}</p>
-          <p>{user[0].fullName}</p>
-          <p>{userPosts.length} Posts Created with this Profile</p>
+          <p>{user.email}</p>
+          <p>{user.fullName}</p>
+          <p>{userPosts && userPosts.length} Posts Created with this Profile</p>
         </>
       )}
 

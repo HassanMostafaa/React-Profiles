@@ -15,7 +15,7 @@ export const ProfilePersonalActivity: React.FC<any> = ({
   const currentUser = useSelector(
     (state: any) => state.currentUserReducer.currentUser[0]
   );
-  const postsURL = `http://localhost:3001/posts`;
+  const postsURL = `https://json-server-dep.herokuapp.com/posts`;
   const date = new Date();
 
   const handleAddPost = async (e: any) => {
@@ -31,13 +31,17 @@ export const ProfilePersonalActivity: React.FC<any> = ({
       createdAt: date,
     });
 
-    getCurrentUserPosts(`http://localhost:3001/users/${currentUser.id}/posts`);
+    getCurrentUserPosts(
+      `https://json-server-dep.herokuapp.com/users/${currentUser.id}/posts`
+    );
     setAddPostForm(false);
   };
 
   const handleDeletePost = async (id: string) => {
     await axios.delete(`${postsURL}/${id}`);
-    getCurrentUserPosts(`http://localhost:3001/users/${currentUser.id}/posts`);
+    getCurrentUserPosts(
+      `https://json-server-dep.herokuapp.com/users/${currentUser.id}/posts`
+    );
   };
 
   return (

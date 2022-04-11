@@ -5,7 +5,7 @@ import { v4 as uuid } from "uuid";
 
 export const SignUpForm: React.FC<any> = ({ setSignInFormState }): any => {
   const [errorMsg, setErrorMsg] = useState("");
-  const mainURL = "http://localhost:3001/users";
+  const mainURL = "https://json-server-dep.herokuapp.com/users";
   const date = new Date();
   // const navigate = useNavigate();
   const handleSignUpForm = async (e: any) => {

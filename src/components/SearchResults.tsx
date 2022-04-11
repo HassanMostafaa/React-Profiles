@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const SearchResults: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [searchState, setSearchState] = useState([]);
-  const URL = "http://localhost:3001/users";
+  const URL = "https://json-server-dep.herokuapp.com/users";
 
   const handleSearchInput = async (e: any) => {
     const inputValue = e.target.value;

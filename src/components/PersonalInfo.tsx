@@ -10,7 +10,7 @@ import { resetCurrentUser } from "./../redux/currentUser/currentUserActions";
 
 export const PersonalInfo: React.FC = () => {
   const dispatch = useDispatch();
-  const mainURL = "http://localhost:3001/users/";
+  const mainURL = "https://json-server-dep.herokuapp.com/users/";
   const [newFullName, setNewFullName] = useState("");
   const [newPhoneNumber, setnewPhoneNumber] = useState("");
   const currentUser = useSelector(

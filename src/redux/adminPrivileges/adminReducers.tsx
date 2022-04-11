@@ -6,7 +6,7 @@ import {
 } from "./adminActions";
 import axios from "axios";
 
-const URL = "http://localhost:3001";
+const URL = "https://json-server-dep.herokuapp.com";
 
 export const initialState = {
   serverUsers: [],
