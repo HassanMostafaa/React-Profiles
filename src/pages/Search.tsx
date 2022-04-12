@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "../components/search.scss";
 import { SearchResults } from "../components/SearchResults";
-import { Outlet } from "react-router-dom";
+//import { Outlet } from "react-router-dom";
 export const Search: React.FC<any> = () => {
   return (
     <div className="search-profiles">
