@@ -17,39 +17,45 @@ export const SignUpForm: React.FC<any> = ({ setSignInFormState }): any => {
     const userNameInput = e.target.userName.value;
     const phoneNumValue = e.target.phoneNum.value;
 
-    const res = await axios.get(`${mainURL}?email=${emailInput}`);
-    const result = await res.data;
+    try {
+      const res = await axios.get(`${mainURL}?email=${emailInput}`);
+      const result = await res.data;
 
-    if (
-      !fullNameInput ||
-      !emailInput ||
-      !passwordInput ||
-      !rePasswordInput ||
-      !userNameInput ||
-      !phoneNumValue
-    ) {
-      setErrorMsg("Make Sure you Entered a valid Values");
-    } else if (passwordInput !== rePasswordInput) {
-      setErrorMsg("Confirm Password Input doesn't Match");
-    } else if (result.length !== 0) {
-      setErrorMsg("Email Address already Used");
-    } else {
-      try {
-        await axios.post(mainURL, {
-          id: uuid(),
-          fullName: fullNameInput,
-          userName: userNameInput,
-          email: emailInput,
-          phone: phoneNumValue,
-          password: passwordInput,
-          privilegeLevel: "user",
-          createdAt: date,
-        });
-        alert("Login with the new user information");
-        setSignInFormState(true);
-      } catch (error) {
-        setErrorMsg(JSON.stringify(error));
+      if (
+        !fullNameInput ||
+        !emailInput ||
+        !passwordInput ||
+        !rePasswordInput ||
+        !userNameInput ||
+        !phoneNumValue
+      ) {
+        setErrorMsg("Make Sure you Entered a valid Values");
+      } else if (passwordInput !== rePasswordInput) {
+        setErrorMsg("Confirm Password Input doesn't Match");
+      } else if (result.length !== 0) {
+        setErrorMsg("Email Address already Used");
+      } else {
+        try {
+          await axios.post(mainURL, {
+            id: uuid(),
+            fullName: fullNameInput,
+            userName: userNameInput,
+            email: emailInput,
+            phone: phoneNumValue,
+            password: passwordInput,
+            privilegeLevel: "user",
+            createdAt: date,
+          });
+          alert("Login with the new user information");
+          setSignInFormState(true);
+        } catch (error) {
+          setErrorMsg(JSON.stringify(error));
+        }
       }
+    } catch (error) {
+      setErrorMsg(
+        `${error} : Please, Make sure the backend json-server is running if you are not sure please contact the site Admin`
+      );
     }
   };
   return (
@@ -63,7 +69,6 @@ export const SignUpForm: React.FC<any> = ({ setSignInFormState }): any => {
         <p
           style={{
             color: "rgb(233, 50, 50)",
-
             padding: "10px",
           }}
         >

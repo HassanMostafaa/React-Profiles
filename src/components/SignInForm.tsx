@@ -6,33 +6,40 @@ export const SignInForm: React.FC<any> = ({ setSignInFormState }): any => {
   const dispatch = useDispatch();
   const usersURL = "https://json-server-dep.herokuapp.com/users";
   const [showErrorMsg, setShowErrorMsg] = useState(false);
-  const [errorMsg] = useState("Invalid Email Address or Password");
+  const [errorMsg, setErrorMsg] = useState("Invalid Email Address or Password");
 
   const handleSignIn = async (e: any) => {
     e.preventDefault();
     const emailInput = e.target.email.value;
     const passwordInput = e.target.signInPassword.value;
-    const res = await axios.get(usersURL);
+    try {
+      const res = await axios.get(usersURL);
 
-    //VALIDATION FROM DATABASE
-    const currentUserState = await res.data.find(
-      (x: any) => x.email === emailInput && x.password === passwordInput
-    );
+      //VALIDATION FROM DATABASE
+      const currentUserState = await res.data.find(
+        (x: any) => x.email === emailInput && x.password === passwordInput
+      );
 
-    if (currentUserState) {
-      try {
-        const postsRes = await axios.get(
-          `${usersURL}/${currentUserState.id}/posts`
-        );
-        const userPosts = postsRes.data;
-        dispatch(setCurrentUser(currentUserState, userPosts));
-        // dispatch(setCurrentUser(`${usersURL}/${currentUserState.id}`));
-      } catch (error: any) {
+      if (currentUserState) {
+        try {
+          const postsRes = await axios.get(
+            `${usersURL}/${currentUserState.id}/posts`
+          );
+          const userPosts = postsRes.data;
+          dispatch(setCurrentUser(currentUserState, userPosts));
+          // dispatch(setCurrentUser(`${usersURL}/${currentUserState.id}`));
+        } catch (error: any) {
+          setShowErrorMsg(false);
+        }
         setShowErrorMsg(false);
+      } else {
+        setShowErrorMsg(true);
       }
-      setShowErrorMsg(false);
-    } else {
+    } catch (error) {
       setShowErrorMsg(true);
+      setErrorMsg(
+        `${error} : Please, Make sure the backend json-server is running if you are not sure please contact the site Admin`
+      );
     }
   };
 
