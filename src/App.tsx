@@ -8,6 +8,7 @@ import { UserProfile } from "./pages/UserProfile";
 import { Dashboard } from "./pages/Dashboard";
 import { AdminPosts } from "./components/AdminPosts";
 import { AdminUsers } from "./components/AdminUsers";
+import { Footer } from "./components/Footer";
 
 function App() {
   const loggedin = useSelector(
@@ -37,6 +38,7 @@ function App() {
           </>
         )}
       </Routes>
+      <Footer />
     </div>
   );
 }

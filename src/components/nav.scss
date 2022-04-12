@@ -4,7 +4,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  width: 100%;
   outline: 2px solid $outliner;
   padding: 10px 40px;
   margin: 20px 0;
@@ -26,6 +26,19 @@ nav {
   }
 
   .logo h3 {
+    letter-spacing: 8px;
+    a {
+      color: $white-text;
+      text-decoration: none;
+    }
+  }
+}
+.footer {
+  width: 100%;
+  text-align: right;
+  .logo h3 {
+    padding: 0;
+
     letter-spacing: 8px;
     a {
       color: $white-text;
